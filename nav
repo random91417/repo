@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.navMenu {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+  color: #272727;
+  text-decoration: none;
+  font-size: 1.2 em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #a1c0fa;
+}
+
+
+
+
+	</style>
+
+		<script>
+			function navigate(id) {
+
+				if(id == 'home')
+				window.open("https://www.notion.so/Home-743cb734ac4c41ee90896e039f0dd917", '_blank').focus();
+				else if(id == "inbox")
+				window.open("https://www.notion.so/Inbox-91a8ce98118147d384c511c67833bb6d", '_blank').focus();
+				else if(id == "inbox")
+				window.open("https://www.notion.so/Projects-e6745abbeaf0418aab7b9f6c57f3aba0", '_blank').focus();
+
+			}
+		</script>
+
+</head>
+
+	<body>
+
+		<nav class="navMenu">
+      <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+      <a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
+      <a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i></i> Projects</a>
+    </nav>
+
+
+
+	</body>
+
+</html>
