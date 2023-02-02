@@ -85,6 +85,8 @@ text-align: center;
 					window.open("https://www.notion.so/My-Life-wiki-51e257c76f984c2cb58858573a101989", '_blank').focus();
 				else if(id == "planner")
 					window.open("https://www.notion.so/shorouk/The-Planner-6e2fe9be90284f49a368eb778278c5f6", '_blank').focus();
+				else if(id == "info")
+					window.open("https://www.notion.so/shorouk/CA-Basic-Info-c3e555011e5f4a268535171b6db39e71", '_blank').focus();
 
 			}
 		</script>
@@ -96,9 +98,10 @@ text-align: center;
 		<nav class="navMenu">
       <a class="icon" id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i></a>
       <a class="icon" id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> </a>
+			<a class="icon" id="info" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-circle-info"></i></a>
 			<a class="icon" id="week" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i></a>
 			<a class="icon" id="month" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-days"></i></a>
-			<a class="icon" id="Planner" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-table-columns"></i></a>
+			<a class="icon" id="planner" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-table-columns"></i></a>
                         <a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a>
 			<a id="tasks" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Tasks</a>
 			<a id="business" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> Business</a>
