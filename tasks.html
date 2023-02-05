@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- Google Font -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+
+  <!-------->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+
+    .navMenu {
+      font-family: 'Heebo', sans-serif;
+      font-size: 0.85em;
+      padding: 8px;
+      text-align: center;
+      margin: 7px auto;
+      width: fit-content;
+    }
+
+    .navMenu a {
+      color: #272727;
+      text-decoration: none;
+      /* text-transform: uppercase; */
+      display: inline-block;
+      padding: 2px;
+    }
+
+    .background {
+      background-color: #fdfdfd;
+    }
+
+    .border {
+      border: 1px solid #cccccc;
+
+    }
+
+    .navMenu a:hover {
+
+      color: #d09c0b;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navMenu border background">
+    <a id="task" style="font-weight: bold;" onclick="navigate(this.id)" href="#"> <i style="color:#eab64f"
+        class="fa-solid fa-list-check"></i> Task Manager</a>
+    <a id="project" style="font-weight: bold;" onclick="navigate(this.id)" href="#"> <i style="color:#3a76b2"
+        class="fa-solid fa-bars-progress"></i> Project Manager</a>
+    <hr>
+    <a id="tom" onclick="navigate(this.id)" href="#"> <i style="color:#645370"
+        class="fa-solid fa-circle-chevron-right"></i> Tomorrow</a>
+    <a id="this-week" onclick="navigate(this.id)" href="#"> <i style="color:#645370"
+        class="fa-solid fa-calendar-week"></i> This Week</a>
+    <a id="upcoming-week" onclick="navigate(this.id)" href="#"> <i style="color:#645370"
+        class="fa-solid fa-calendar-plus"></i> Upcoming Week</a>
+    <hr>
+    <a id="actionable" onclick="navigate(this.id)" href="#"> <i style="color:rgb(0, 139, 111)"
+        class="fa-solid fa-gear"></i></i>Actionable</a>
+    <a id="high" onclick="navigate(this.id)" href="#"> <i style="color:rgb(152, 14, 14)" class="fa-solid fa-star"></i>
+      High Priority</a>
+      <a id="dependable" onclick="navigate(this.id)" href="#"> <i style="color:rgb(152, 14, 97)" class="fa-solid fa-code-branch"></i>
+        Has Dependant</a>
+    <hr>
+    <a id="in-progress" onclick="navigate(this.id)" href="#"> <i style="color:rgb(40, 121, 78)"
+        class="fa-solid fa-spinner"></i> In Progress</a>
+    <a id="overdue" onclick="navigate(this.id)" href="#"> <i style="color:rgb(204, 99, 18)"
+          class="fa-solid fa-triangle-exclamation"></i> overdue</a>
+    <a id="pending" onclick="navigate(this.id)" href="#"> <i style="color:rgb(223, 187, 88)"
+        class="fa-solid fa-hourglass-half"></i> Pending</a>
+    <a id="delegated" onclick="navigate(this.id)" href="#"> <i style="color:rgb(177, 89, 155)"
+        class="fa-solid fa-handshake-angle"></i> Delegated</a>
+    <a id="maybe" onclick="navigate(this.id)" href="#"> <i style="color:rgb(180, 212, 61)"
+        class="fa-solid fa-scale-unbalanced-flip"></i> Maybe</a>
+    <a id="done" onclick="navigate(this.id)" href="#"> <i style="color:rgb(32, 155, 81)"
+        class="fa-solid fa-square-check"></i> Done</a>
+    <a id="cancelled" onclick="navigate(this.id)" href="#"> <i style="color:rgb(110, 0, 0)"
+        class="fa-solid fa-rectangle-xmark"></i> Cancelled</a>
+    <hr>
+    <a id="home" onclick="navigate(this.id)" href="#"> <i style="color:#645370" class="fa-solid fa-house-chimney"></i>
+      Home</a>
+    <a id="errand" onclick="navigate(this.id)" href="#"> <i style="color:#645370" class="fa-solid fa-car-side"></i>
+      Errand</a>
+    <a id="laptop" onclick="navigate(this.id)" href="#"> <i style="color:#645370" class="fa-solid fa-house-laptop"></i>
+      Laptop</a>
+    <a id="phone" onclick="navigate(this.id)" href="#"> <i style="color:#645370" class="fa-solid fa-mobile"></i>
+      Phone</a>
+    <a id="other" onclick="navigate(this.id)" href="#"> <i style="color:#645370" class="fa-solid fa-circle"></i> Other
+      Context</a>
+      <hr>
+    <a id="pages" onclick="navigate(this.id)" href="#"> <i style="color:#313131" class="fa-solid fa-file"></i> Pages</a>
+
+
+
+
+  </nav>
+
+
+  <script>
+
+    let direction = "vertical";
+    if (direction === "vertical") {
+      document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+    }
+
+
+    function navigate(id) {
+
+      if (id == 'task')
+        window.open("https://www.notion.so/shorouk/Task-Manager-48ea6f04eaf24aa0889a5b5de34ea415", '_parent').focus();
+      else if (id == "project")
+        window.open("https://www.notion.so/shorouk/Project-Manager-f5ed65c9235d4136aac1b1ad513af486", '_blank').focus();
+      else if (id == "tom")
+        window.open("https://www.notion.so/shorouk/Tomorrow-05e85578eb8e43f3a6b1fe584dba7448", '_parent').focus();
+      else if (id == "this-week")
+        window.open("https://www.notion.so/shorouk/This-Week-13855e513b384ab583042b99df7a1275", '_parent').focus();
+      else if (id == "upcoming-week")
+        window.open("https://www.notion.so/shorouk/Upcoming-Week-a718c291a5854fcba29b06d6d52db68f", '_parent').focus();
+      else if (id == "actionable")
+        window.open("https://www.notion.so/shorouk/All-Actionable-Tasks-ea0109ebc397467b8cedcf740713edc0", '_parent').focus();
+      else if (id == "high")
+        window.open("https://www.notion.so/shorouk/High-Priority-8e0b9a4083f644519dbf040d303e7160", '_parent').focus();
+      else if (id == "in-progress")
+        window.open("https://www.notion.so/shorouk/In-Progress-8da34549763740289364aba0faae8441", '_parent').focus();
+      else if (id == "pending")
+        window.open("https://www.notion.so/shorouk/Pending-7cc290285f514e64bb3aa781f99f46dd", '_parent').focus();
+      else if (id == "delegated")
+        window.open("https://www.notion.so/shorouk/Delegated-2332c45de0464f309ea553189db8f201", '_parent').focus();
+      else if (id == "maybe")
+        window.open("https://www.notion.so/shorouk/Maybe-3045052bce3549be971d4a6a541b73b2", '_parent').focus();
+      else if (id == "done")
+        window.open("https://www.notion.so/shorouk/Done-7bebc2cfb8054d92af3486650b436e32", '_parent').focus();
+      else if (id == "cancelled")
+        window.open("https://www.notion.so/shorouk/Cancelled-40c9f9856d264c2bb8eeb86a8a70f666", '_parent').focus();
+      else if (id == "overdue")
+        window.open("https://www.notion.so/shorouk/Overdue-Tasks-fe1799e9377e44c6bcbd517bf822c18e", '_parent').focus();
+        else if (id == "dependable")
+        window.open("https://www.notion.so/shorouk/Tasks-with-dependents-4114f6e5ee0143bb84a62c5681af0461", '_parent').focus();
+        else if (id == "pages")
+        window.open("https://www.notion.so/shorouk/Navigation-84eb9e9e121447e798cf6817ea968e28", '_parent').focus();
+
+        else if (id == "home")
+        window.open("https://www.notion.so/shorouk/Home-cdd267f6e2f5459e90e112241a35c62d", '_parent').focus();
+        else if (id == "errand")
+        window.open("https://www.notion.so/shorouk/Errand-9740374cb9a1441c9a7de13ea0b26dba", '_parent').focus();
+        else if (id == "laptop")
+        window.open("https://www.notion.so/shorouk/Laptop-5bcf930b0bfb49b485b4843fef2c64f9", '_parent').focus();
+        else if (id == "phone")
+        window.open("https://www.notion.so/shorouk/Phone-12cb6871f6f443e9bef0551f28012573", '_parent').focus();
+        else if (id == "other")
+        window.open("https://www.notion.so/shorouk/Other-Context-f497926f3a044bc099b3956865811f28", '_parent').focus();
+    }
+  </script>
+
+
+</body>
+
+</html>
