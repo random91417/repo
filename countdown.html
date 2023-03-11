@@ -16,12 +16,13 @@
       background-color: white;
       display: flex;
       flex-direction: column;
-      align-items: center
+      align-items: center;
+      justify-content: center;
     }
 
     #timer {
       display: flex;
-      flex-flow: wrap;
+      flex-direction: column;
       row-gap: 10px;
       column-gap: 10px;
       color: #eeeeee;
@@ -112,25 +113,31 @@
 </head>
 
 <body>
-  <h3>Presentation Day</h3>
+  <h3>⏳ Presentation Day</h3>
   <div id="timer">
 
-    <div class="days">
-      <div id="days" class="numbers "> </div>
-      <div class="small">days</div>
+    <div style="display: flex;column-gap: 10px;">
+      <div class="days">
+        <div id="days" class="numbers "> </div>
+        <div class="small">days</div>
+      </div>
+      <div class="hours">
+        <div id="hours" class="numbers"> </div>
+        <div class="small">hours</div>
+      </div>
     </div>
-    <div class="hours">
-      <div id="hours" class="numbers"> </div>
-      <div class="small">hours</div>
+    <div style="display: flex;column-gap: 10px;">
+      <div class="minutes">
+        <div id="minutes" class="numbers"> </div>
+        <div class="small">minutes</div>
+      </div>
+      <div class="seconds">
+        <div id="seconds" class="numbers"> </div>
+        <div class="small">seconds</div>
+      </div>
     </div>
-    <div class="minutes">
-      <div id="minutes" class="numbers"> </div>
-      <div class="small">minutes</div>
-    </div>
-    <div class="seconds">
-      <div id="seconds" class="numbers"> </div>
-      <div class="small">seconds</div>
-    </div>
+
+
   </div>
 
   </div>
